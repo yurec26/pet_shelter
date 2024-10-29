@@ -1,0 +1,31 @@
+[ {
+  "id" : 1,
+  "capacity" : 2.0,
+  "type" : "CAT",
+  "animalList" : [ 1 ],
+  "spaceAvailable" : 1.98
+}, {
+  "id" : 2,
+  "capacity" : 3.0,
+  "type" : "DOG",
+  "animalList" : [ 2 ],
+  "spaceAvailable" : 2.9
+}, {
+  "id" : 3,
+  "capacity" : 1.0,
+  "type" : "ALL",
+  "animalList" : [ ],
+  "spaceAvailable" : 1.0
+}, {
+  "id" : 4,
+  "capacity" : 3.0,
+  "type" : "ALL",
+  "animalList" : [ ],
+  "spaceAvailable" : 3.0
+}, {
+  "id" : 9999,
+  "capacity" : -1.0,
+  "type" : "ALL",
+  "animalList" : [ ],
+  "spaceAvailable" : -1.0
+} ]

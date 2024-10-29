@@ -1,0 +1,29 @@
+[ {
+  "id" : 1,
+  "type" : "CAT",
+  "name" : "Кошка",
+  "breed" : "Дворовая",
+  "birthDate" : [ 2022, 10, 11 ],
+  "incomeDate" : [ 2024, 10, 25 ],
+  "adoptDate" : null,
+  "owner" : null,
+  "vaccList" : [ ],
+  "desList" : [ ],
+  "aviaryNum" : 1,
+  "description" : null,
+  "adopted" : false
+}, {
+  "id" : 2,
+  "type" : "DOG",
+  "name" : "Собака",
+  "breed" : "Собака",
+  "birthDate" : [ 2024, 10, 9 ],
+  "incomeDate" : [ 2024, 10, 29 ],
+  "adoptDate" : null,
+  "owner" : null,
+  "vaccList" : [ ],
+  "desList" : [ ],
+  "aviaryNum" : 2,
+  "description" : null,
+  "adopted" : false
+} ]

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MAIN_PANE" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffce92;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.client.controller.MainAppController">
+    <children>
+        <AnchorPane layoutY="135.0" prefHeight="490.0" prefWidth="953.0" style="-fx-background-color: fafafa;" />
+        <ImageView fitHeight="490.0" fitWidth="953.0" layoutY="135.0" opacity="0.96">
+            <image>
+                <Image url="@../../../assets/bg.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="292.0" layoutY="64.0" prefHeight="70.0" prefWidth="409.0" text="Cat-Dog-Rabbits">
+            <font>
+                <Font name="System Bold" size="48.0" />
+            </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.5757575739513743" startX="0.06439398183967127">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.4586666524410248" blue="0.6399999856948853" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6842105388641357" green="0.17485380172729492" blue="0.17485380172729492" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </Label>
+        <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="437.0" layoutY="5.0">
+            <image>
+                <Image url="@../../../assets/logo.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="ExitButton" fitHeight="15.0" fitWidth="15.0" layoutX="931.0" layoutY="5.0" onMouseClicked="#exit">
+            <image>
+                <Image url="@../../../assets/close-button2.png" />
+            </image>
+        </ImageView>
+        <Line endX="952.0" layoutY="626.0" stroke="#325372" />
+        <Line endX="952.0" layoutY="135.0" stroke="#325372" />
+        <ScrollPane layoutX="56.0" layoutY="158.0" opacity="0.66" prefHeight="374.0" prefWidth="826.0">
+         <content>
+            <TableView fx:id="tableview" prefHeight="379.0" prefWidth="810.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="idColumn" editable="false" minWidth="7.0" prefWidth="59.20000916719437" resizable="false" text="ID" />
+                <TableColumn fx:id="typeColumn" editable="false" minWidth="7.0" prefWidth="104.00002670288086" resizable="false" text="Вид Питомца" />
+                  <TableColumn fx:id="nameColumn" editable="false" minWidth="7.0" prefWidth="129.60000610351562" resizable="false" text="Имя" />
+                  <TableColumn fx:id="breedColumn" editable="false" minWidth="7.0" prefWidth="99.20001220703125" resizable="false" text="Порода" />
+                  <TableColumn fx:id="birthDateColumn" editable="false" minWidth="7.0" prefWidth="90.4000244140625" resizable="false" text="Полных лет" />
+                  <TableColumn fx:id="incomeDateColumn" editable="false" minWidth="7.0" prefWidth="131.199951171875" resizable="false" text="Дата Поступления" />
+                  <TableColumn fx:id="isAdoptedColumn" editable="false" minWidth="7.0" prefWidth="91.20001220703125" resizable="false" text="Статус" />
+                  <TableColumn fx:id="aviaryNumColumn" editable="false" minWidth="7.0" prefWidth="94.4000244140625" resizable="false" text="Вольер" />
+              </columns>
+            </TableView>
+         </content>
+        </ScrollPane>
+      <Rectangle fx:id="AdoptButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="30.0" layoutX="172.0" layoutY="552.0" onMouseClicked="#adopt" opacity="0.7" stroke="#cfa777" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="100.0" />
+      <Text fx:id="Text_Adopt_Button" disable="true" fill="WHITE" layoutX="172.0" layoutY="572.0" onMouseClicked="#adopt" stroke="WHITE" strokeType="INSIDE" text="Adopt" textAlignment="CENTER" wrappingWidth="99.44090270996094">
+         <font>
+            <Font name="Lucida Sans Unicode" size="17.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="MoveButton1" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="30.0" layoutX="316.0" layoutY="552.0" onMouseClicked="#move" opacity="0.7" stroke="#cfa777" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="100.0" />
+      <Text fx:id="Text_Move_Button1" disable="true" fill="WHITE" layoutX="316.0" layoutY="572.0" onMouseClicked="#move" stroke="WHITE" strokeType="INSIDE" text="Move" textAlignment="CENTER" wrappingWidth="99.44090270996094">
+         <font>
+            <Font name="Lucida Sans Unicode" size="17.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="AddButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="30.0" layoutX="477.0" layoutY="552.0" onMouseClicked="#addAnimal" opacity="0.7" stroke="#cfa777" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="100.0" />
+      <Text fx:id="Text_Add_Button" disable="true" fill="WHITE" layoutX="477.0" layoutY="572.0" onMouseClicked="#addAnimal" stroke="WHITE" strokeType="INSIDE" text="Add" textAlignment="CENTER" wrappingWidth="99.44090270996094">
+         <font>
+            <Font name="Lucida Sans Unicode" size="17.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="InfoButton1" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="30.0" layoutX="631.0" layoutY="551.0" onMouseClicked="#infoCard" opacity="0.7" stroke="#cfa777" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="100.0" />
+      <Text fx:id="Text_Info_Button1" disable="true" fill="WHITE" layoutX="632.0" layoutY="571.0" onMouseClicked="#infoCard" stroke="WHITE" strokeType="INSIDE" text="Info" textAlignment="CENTER" wrappingWidth="99.44090270996094">
+         <font>
+            <Font name="Lucida Sans Unicode" size="17.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="displayChoice" layoutX="109.0" layoutY="68.0" opacity="0.7" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #beda93; -fx-background-radius: 12; -fx-border-color: #3c5618; -fx-border-radius: 12; -fx-border-width: 3;" />
+      <Rectangle fx:id="FilterButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="25.0" layoutX="109.0" layoutY="105.0" onMouseClicked="#filter" opacity="0.7" stroke="#beda93" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="120.0" />
+      <Text fx:id="FiltertButtonText" disable="true" fill="WHITE" layoutX="119.0" layoutY="122.0" onMouseClicked="#filter" stroke="WHITE" strokeType="INSIDE" text="filter" textAlignment="CENTER" wrappingWidth="99.44090270996094">
+         <font>
+            <Font name="Lucida Sans Unicode" size="14.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="AviaryInfoButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="25.0" layoutX="747.0" layoutY="105.0" onMouseClicked="#aviaryInfo" opacity="0.7" stroke="#beda93" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="120.0" />
+      <Text disable="true" fill="WHITE" layoutX="757.0" layoutY="122.0" stroke="WHITE" strokeType="INSIDE" text="aviaries info" textAlignment="CENTER" wrappingWidth="99.44090270996094">
+         <font>
+            <Font name="Lucida Sans Unicode" size="14.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

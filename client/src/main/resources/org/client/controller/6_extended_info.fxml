@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="584.0" prefWidth="505.0" style="-fx-background-color: #ffce92; -fx-border-color: #5e7939; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.client.controller.ExtendedInfoController">
+   <children>
+      <Text fill="#306843" layoutX="30.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="30.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="260.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="260.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Breed">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="30.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DoB">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text layoutX="75.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fill="#306843" layoutX="260.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adoption Date">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="63.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaccination List">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="342.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Decease List">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="260.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="30.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aviary num.">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="30.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income Date">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="214.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fill="#306843" layoutX="260.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <ListView fx:id="illList" layoutX="272.0" layoutY="343.0" prefHeight="73.0" prefWidth="215.0" />
+      <ListView fx:id="vaccList" layoutX="13.0" layoutY="343.0" prefHeight="73.0" prefWidth="215.0" />
+      <Text fx:id="id" layoutX="130.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="type" layoutX="130.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вид">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="name" layoutX="370.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="breed" layoutX="370.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Порода">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="age" layoutX="130.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Возраст">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="adoptTime" layoutX="370.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата усыновления">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="status" layoutX="370.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Статус">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="aviary" layoutX="130.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер вольера">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="incomeDate" layoutX="130.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" приют">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fx:id="owner" layoutX="370.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Хозяин">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Rectangle fx:id="closeButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="35.0" layoutX="380.0" layoutY="522.0" opacity="0.63" stroke="#325372" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="110.0" />
+      <Text fx:id="Text_CloseButton" disable="true" fill="WHITE" layoutX="400.0" layoutY="544.0" stroke="WHITE" strokeType="INSIDE" text="Close" textAlignment="CENTER" wrappingWidth="70.6787109375">
+         <font>
+            <Font name="Lucida Sans Unicode" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#306843" layoutX="260.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fx:id="phone" layoutX="370.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Телефон">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Rectangle fx:id="addDesButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="28.0" layoutX="294.0" layoutY="426.0" onMouseClicked="#addDecease" opacity="0.63" stroke="#325372" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="76.0" />
+      <Text fx:id="addDesButtonText" disable="true" fill="WHITE" layoutX="304.0" layoutY="443.0" onMouseClicked="#addDecease" stroke="WHITE" strokeType="INSIDE" text="Add" textAlignment="CENTER" wrappingWidth="55.6181640625">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="removeDesButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="28.0" layoutX="390.0" layoutY="426.0" onMouseClicked="#removeDecease" opacity="0.63" stroke="#325372" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="76.0" />
+      <Text fx:id="removeDesText" disable="true" fill="WHITE" layoutX="393.0" layoutY="443.0" onMouseClicked="#removeDecease" stroke="WHITE" strokeType="INSIDE" text="Remove" textAlignment="CENTER" wrappingWidth="70.6787109375">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="addVacButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="28.0" layoutX="74.0" layoutY="427.0" onMouseClicked="#addVaccine" opacity="0.63" stroke="#325372" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="76.0" />
+      <Text fx:id="addVacText" disable="true" fill="WHITE" layoutX="87.0" layoutY="444.0" onMouseClicked="#addVaccine" stroke="WHITE" strokeType="INSIDE" text="Add" textAlignment="CENTER" wrappingWidth="49.73388671875">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="info" editable="false" layoutX="153.0" layoutY="492.0" prefHeight="73.0" prefWidth="200.0" />
+      <Rectangle fx:id="EditInfoText1" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="28.0" layoutX="47.0" layoutY="515.0" onMouseClicked="#editDescription" opacity="0.63" stroke="#325372" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="99.0" />
+      <Text fx:id="EditInfoButton" disable="true" fill="WHITE" layoutX="49.0" layoutY="532.0" onMouseClicked="#editDescription" stroke="WHITE" strokeType="INSIDE" text="Edit" textAlignment="CENTER" wrappingWidth="95.255859375">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </Text>
+      <Line endX="11.0" endY="308.0" opacity="0.13" startX="495.5" startY="308.0" />
+   </children>
+</AnchorPane>

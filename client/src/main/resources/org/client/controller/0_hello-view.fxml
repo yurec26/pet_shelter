@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MAIN_PANE" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffce92;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.client.controller.HelloController">
+   <children>
+      <AnchorPane layoutY="135.0" prefHeight="490.0" prefWidth="953.0" style="-fx-background-color: fafafa;" />
+      <ImageView fitHeight="490.0" fitWidth="953.0" layoutY="135.0" opacity="0.96">
+         <image>
+            <Image url="@../../../assets/bg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="284.0" layoutY="65.0" prefHeight="70.0" prefWidth="432.0" text="Cat-Dog-Rabbits" textFill="#0075a4">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="427.805" layoutY="5.0">
+         <image>
+            <Image url="@../../../assets/logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="LogInButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="48.0" layoutX="495.0" layoutY="543.0" onMouseClicked="#handleButtonAction" opacity="0.63" stroke="#325372" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="145.0" />
+      <Text fx:id="Text_Button" disable="true" fill="WHITE" layoutX="500.0" layoutY="576.0" onMouseClicked="#handleButtonAction" stroke="WHITE" strokeType="INSIDE" text="Start" textAlignment="CENTER" wrappingWidth="135.44091796875">
+         <font>
+            <Font name="Lucida Sans Unicode" size="28.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="ExitButton" fitHeight="15.0" fitWidth="15.0" layoutX="931.0" layoutY="5.0" onMouseClicked="#exit">
+         <image>
+            <Image url="@../../../assets/close-button2.png" />
+         </image>
+      </ImageView>
+      <Line endX="952.0" layoutY="626.0" stroke="#325372" />
+      <Line endX="952.0" layoutY="135.0" stroke="#325372" />
+      <Text fill="#3c5618" layoutX="217.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the pet shelter database service" wrappingWidth="367.73663330078125">
+         <font>
+            <Font name="System Italic" size="50.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
