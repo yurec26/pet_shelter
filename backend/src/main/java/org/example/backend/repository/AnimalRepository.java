@@ -9,11 +9,11 @@ public class AnimalRepository extends ShelterRepository<Animal> {
 
     @Override
     public void loadFromRepo() throws IOException {
-        IOUtil.loadFromRepoFileAnimal(super.getAll());
+        IOUtil.loadFromRepoFileAnimal(entities);
     }
 
     @Override
     public void updateRepoFile() throws IOException {
-        IOUtil.updateRepoFileAnimal(super.getAll());
+        IOUtil.updateRepoFileAnimal(entities);
     }
 }

@@ -19,7 +19,7 @@
 }, {
   "id" : 4,
   "capacity" : 3.0,
-  "type" : "ALL",
-  "animalList" : [ ],
-  "spaceAvailable" : 3.0
+  "type" : "CAT",
+  "animalList" : [ 2 ],
+  "spaceAvailable" : 2.98
 } ]

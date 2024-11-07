@@ -15,4 +15,18 @@
   "aviaryNum" : 0,
   "description" : null,
   "adopted" : true
+}, {
+  "id" : 2,
+  "type" : "CAT",
+  "name" : "1",
+  "breed" : "1",
+  "birthDate" : [ 2024, 10, 29 ],
+  "incomeDate" : [ 2024, 11, 7 ],
+  "adoptDate" : null,
+  "owner" : null,
+  "vaccList" : [ ],
+  "desList" : [ ],
+  "aviaryNum" : 4,
+  "description" : null,
+  "adopted" : false
 } ]

@@ -9,11 +9,11 @@ public class AviaryRepository extends ShelterRepository<Aviary> {
 
     @Override
     public void loadFromRepo() throws IOException {
-        IOUtil.loadFromRepoFileAviary(super.getAll());
+        IOUtil.loadFromRepoFileAviary(entities);
     }
 
     @Override
     public void updateRepoFile() throws IOException {
-        IOUtil.updateRepoFileAviary(super.getAll());
+        IOUtil.updateRepoFileAviary(entities);
     }
 }

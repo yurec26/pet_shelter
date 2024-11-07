@@ -5,6 +5,7 @@ module client {
     requires javafx.fxml;
     requires javafx.graphics;
     requires com.fasterxml.jackson.core;
+    requires org.slf4j;
 
     exports org.client.controller to  javafx.graphics, backend;
     opens org.client.controller to javafx.fxml, backend;

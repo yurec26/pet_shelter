@@ -22,13 +22,19 @@ import org.client.util.FXButton_Effects;
 import org.client.util.FXLoader;
 import org.example.backend.service.AviaryService;
 import org.example.backend.util.IdGeneratorUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.NoSuchElementException;
 
 public class MainAppController {
+
+    public static Logger logger = LoggerFactory.getLogger(MainAppController.class);
+
     @FXML
     private ImageView ExitButton;
     @FXML
@@ -122,6 +128,8 @@ public class MainAppController {
                                 .addAnimal(newID, animalType, animalName, animalBreed, birthDate, aviaryId);
                         aviaryService.add(animalType, newID, aviaryId);
                     }
+                } catch (NoSuchElementException noSuchElementException) {
+                    logger.warn("Wrong input data attempt in addAnimal method");
                 } catch (IOException ex) {
                     throw new RuntimeException("Something went wrong");
                 }
@@ -150,11 +158,13 @@ public class MainAppController {
                         stageResult.stage().close();
                         try {
                             if (aviaryService.isSuitable(aviaryNum, selectedAnimal.getType())) {
-                                aviaryService.move(selectedAnimal, aviaryNum,false);
+                                aviaryService.move(selectedAnimal, aviaryNum, false);
                                 animalService.moveAnimal(selectedAnimal.getId(), aviaryNum);
                             }
                             updateTableView(displayChoiceOption);
-                        } catch (Exception ex) {
+                        } catch (NoSuchElementException noSuchElementException) {
+                            logger.warn("Wrong input data attempt in moveAnimal method");
+                        } catch (IOException ex) {
                             throw new RuntimeException("Something went wrong");
                         }
                     } else {
@@ -182,9 +192,11 @@ public class MainAppController {
                     if (!ownerName.isEmpty() && !ownerNumber.isEmpty()) {
                         stageResult.stage().close();
                         try {
-                            aviaryService.move(selectedAnimal, 0,true);
+                            aviaryService.move(selectedAnimal, 0, true);
                             animalService.giveAnimal(selectedAnimal.getId(), ownerName, ownerNumber);
-                        } catch (Exception ex) {
+                        }catch (NoSuchElementException noSuchElementException) {
+                            logger.warn("Wrong input data attempt in adopt method");
+                        } catch (IOException ex) {
                             throw new RuntimeException("Something went wrong");
                         }
                     } else {

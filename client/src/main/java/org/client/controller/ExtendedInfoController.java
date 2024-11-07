@@ -210,7 +210,7 @@ public class ExtendedInfoController {
     }
 
     public void updateLists() {
-        animal = animalService.animalRepository().getById(animal.getId());
+        animal = animalService.animalRepository().getById(animal.getId()).get();
         info.setText(animal.getDescription());
         illList.setItems(FXCollections.observableArrayList(animal.getDesList()));
         vaccList.setItems(FXCollections.observableArrayList(animal.getVaccList()));
