@@ -13,6 +13,9 @@ public class IdGeneratorUtil {
     }
 
     public static void findMaxID(List<Animal> animals) {
-        idCounter = MaxIDCounterUtil.countMaxID(animals);
+        idCounter = animals.stream()
+                .mapToInt(Animal::getId)
+                .max()
+                .orElse(0);
     }
 }

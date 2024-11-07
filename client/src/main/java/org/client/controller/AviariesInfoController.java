@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.shape.Rectangle;
-import org.example.backend.constants.AviaryConstants;
 import org.example.backend.entity.Aviary;
 import org.client.util.FXButton_Effects;
 import org.example.backend.service.AviaryService;
@@ -67,9 +66,7 @@ public class AviariesInfoController {
         type.setCellValueFactory(cellData
                 -> new SimpleStringProperty(cellData.getValue().getType()
                 .getName()));
-        List<Aviary> aviaries = aviaryService.getAll().stream()
-                .filter(aviary -> aviary.getId() != AviaryConstants.ADOPT_AVIARY_NUM)
-                .toList();
+        List<Aviary> aviaries = aviaryService.getAll();
         AviaryView.getItems().setAll(aviaries);
     }
 }

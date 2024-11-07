@@ -1,5 +1,8 @@
 package org.example.backend.util;
 
+import org.example.backend.entity.Animal;
+import org.example.backend.entity.Aviary;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -9,21 +12,21 @@ public class IOUtil {
 
     private static final String ANIMALS_REPO_FILE = "backend/src/main/resources/animals.json";
 
-    public static <T> void loadFromRepoFileAnimal(List<T> list, Class<T> clazz) throws IOException {
+    public static void loadFromRepoFileAnimal(List<Animal> list) throws IOException {
         list.clear();
-        list.addAll(JsonUtil.jsonToMap(ANIMALS_REPO_FILE, clazz));
+        list.addAll(JsonUtil.jsonToList(ANIMALS_REPO_FILE, Animal.class));
     }
 
-    public static <T> void loadFromRepoFileAviary(List<T> list, Class<T> clazz) throws IOException {
+    public static void loadFromRepoFileAviary(List<Aviary> list) throws IOException {
         list.clear();
-        list.addAll(JsonUtil.jsonToMap(AVIARIES_REPO_FILE, clazz));
+        list.addAll(JsonUtil.jsonToList(AVIARIES_REPO_FILE, Aviary.class));
     }
 
-    public static <T> void updateRepoFileAviary(List<T> list) throws IOException {
+    public static void updateRepoFileAviary(List<Aviary> list) throws IOException {
         JsonUtil.listToJSON(list, AVIARIES_REPO_FILE);
     }
 
-    public static <T> void updateRepoFileAnimal(List<T> list) throws IOException {
+    public static void updateRepoFileAnimal(List<Animal> list) throws IOException {
         JsonUtil.listToJSON(list, ANIMALS_REPO_FILE);
     }
 

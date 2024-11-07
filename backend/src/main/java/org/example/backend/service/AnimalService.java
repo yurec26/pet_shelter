@@ -1,7 +1,6 @@
 package org.example.backend.service;
 
 import org.example.backend.constants.AnimalType;
-import org.example.backend.constants.AviaryConstants;
 import org.example.backend.entity.Animal;
 import org.example.backend.entity.Owner;
 import org.example.backend.repository.AnimalRepository;
@@ -17,18 +16,21 @@ public record AnimalService(AnimalRepository animalRepository) {
         Animal animal = new Animal(type, name, breed, birthDate, aviaryNum);
         animal.setId(id);
         animal.setIncomeDate(LocalDate.now());
-        animalRepository.add(animal).updateRepoFile();
+        animalRepository.add(animal);
+        animalRepository.updateRepoFile();
     }
 
     public List<Animal> getAviaryList() throws IOException {
-        return animalRepository.loadFromRepo().getAll();
+        animalRepository.loadFromRepo();
+        return animalRepository.getAll();
     }
 
     public void moveAnimal(int id, int newAviary) throws IOException {
         Animal animal = animalRepository.getById(id);
         if (animal != null) {
             animal.setAviaryNum(newAviary);
-            animalRepository.update(animal).updateRepoFile();
+            animalRepository.update(animal);
+            animalRepository.updateRepoFile();
         } else {
             throw new NullPointerException("Wrong input data");
         }
@@ -38,7 +40,8 @@ public record AnimalService(AnimalRepository animalRepository) {
         Animal animal = animalRepository.getById(id);
         if (animal != null) {
             animal.getDesList().add(disease);
-            animalRepository.update(animal).updateRepoFile();
+            animalRepository.update(animal);
+            animalRepository.updateRepoFile();
         } else {
             throw new NullPointerException("Wrong input data");
         }
@@ -48,7 +51,8 @@ public record AnimalService(AnimalRepository animalRepository) {
         Animal animal = animalRepository.getById(id);
         if (animal != null) {
             animal.getDesList().remove(disease);
-            animalRepository.update(animal).updateRepoFile();
+            animalRepository.update(animal);
+            animalRepository.updateRepoFile();
         } else {
             throw new NullPointerException("Wrong input data");
         }
@@ -58,7 +62,8 @@ public record AnimalService(AnimalRepository animalRepository) {
         Animal animal = animalRepository.getById(id);
         if (animal != null) {
             animal.getVaccList().add(vaccine);
-            animalRepository.update(animal).updateRepoFile();
+            animalRepository.update(animal);
+            animalRepository.updateRepoFile();
         } else {
             throw new NullPointerException("Wrong input data");
         }
@@ -68,7 +73,8 @@ public record AnimalService(AnimalRepository animalRepository) {
         Animal animal = animalRepository.getById(id);
         if (animal != null) {
             animal.setDescription(description);
-            animalRepository.update(animal).updateRepoFile();
+            animalRepository.update(animal);
+            animalRepository.updateRepoFile();
         } else {
             throw new NullPointerException("Wrong input data");
         }
@@ -80,8 +86,9 @@ public record AnimalService(AnimalRepository animalRepository) {
             animal.setOwner(new Owner(ownerName, ownerPhone));
             animal.setAdopted(true);
             animal.setAdoptDate(LocalDate.now());
-            animal.setAviaryNum(AviaryConstants.ADOPT_AVIARY_NUM);
-            animalRepository.update(animal).updateRepoFile();
+            animal.setAviaryNum(0);
+            animalRepository.update(animal);
+            animalRepository.updateRepoFile();
         } else {
             throw new NullPointerException("Wrong input data");
         }

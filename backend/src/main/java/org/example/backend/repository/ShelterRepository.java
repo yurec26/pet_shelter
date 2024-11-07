@@ -1,17 +1,32 @@
 package org.example.backend.repository;
 
+import org.example.backend.entity.Entity;
+
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-public interface ShelterRepository<T> {
+public abstract class ShelterRepository<T extends Entity> {
+    List<T> entities = new ArrayList<>();
 
-     T getById(int id);
+    public T getById(int id) {
+        return entities.stream().filter(s -> s.getId() == id).findAny().orElse(null);
+    }
 
-     ShelterRepository<T> update(T entity);
+    public void update(T entity) {
+        entities.set(entities.indexOf(entity), entity);
+    }
 
-     List<T> getAll();
+    public List<T> getAll() {
+        return entities;
+    }
 
-    ShelterRepository<T> loadFromRepo() throws IOException;
+    public void add(T entity){
+        entities.add(entity);
+    }
 
-    void updateRepoFile() throws IOException;
+    abstract void loadFromRepo() throws IOException;
+
+    abstract void updateRepoFile() throws IOException;
 }
+

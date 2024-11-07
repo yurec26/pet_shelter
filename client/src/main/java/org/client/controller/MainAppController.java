@@ -150,7 +150,7 @@ public class MainAppController {
                         stageResult.stage().close();
                         try {
                             if (aviaryService.isSuitable(aviaryNum, selectedAnimal.getType())) {
-                                aviaryService.move(selectedAnimal, aviaryNum);
+                                aviaryService.move(selectedAnimal, aviaryNum,false);
                                 animalService.moveAnimal(selectedAnimal.getId(), aviaryNum);
                             }
                             updateTableView(displayChoiceOption);
@@ -182,7 +182,7 @@ public class MainAppController {
                     if (!ownerName.isEmpty() && !ownerNumber.isEmpty()) {
                         stageResult.stage().close();
                         try {
-                            aviaryService.move(selectedAnimal, aviaryService.getADOPT_AVIARY_NUM());
+                            aviaryService.move(selectedAnimal, 0,true);
                             animalService.giveAnimal(selectedAnimal.getId(), ownerName, ownerNumber);
                         } catch (Exception ex) {
                             throw new RuntimeException("Something went wrong");

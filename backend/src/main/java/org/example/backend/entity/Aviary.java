@@ -5,7 +5,7 @@ import org.example.backend.constants.AnimalType;
 import java.util.List;
 import java.util.Objects;
 
-public class Aviary {
+public class Aviary implements Entity{
 
     private int id;
     private double capacity;

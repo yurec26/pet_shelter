@@ -1,29 +1,18 @@
 [ {
   "id" : 1,
   "type" : "CAT",
-  "name" : "Кошка",
-  "breed" : "Дворовая",
-  "birthDate" : [ 2022, 10, 11 ],
-  "incomeDate" : [ 2024, 10, 25 ],
-  "adoptDate" : null,
-  "owner" : null,
+  "name" : "1",
+  "breed" : "1",
+  "birthDate" : [ 2024, 11, 6 ],
+  "incomeDate" : [ 2024, 11, 7 ],
+  "adoptDate" : [ 2024, 11, 7 ],
+  "owner" : {
+    "fullName" : "qq",
+    "phone" : "1"
+  },
   "vaccList" : [ ],
   "desList" : [ ],
-  "aviaryNum" : 1,
+  "aviaryNum" : 0,
   "description" : null,
-  "adopted" : false
-}, {
-  "id" : 2,
-  "type" : "DOG",
-  "name" : "Собака",
-  "breed" : "Собака",
-  "birthDate" : [ 2024, 10, 9 ],
-  "incomeDate" : [ 2024, 10, 29 ],
-  "adoptDate" : null,
-  "owner" : null,
-  "vaccList" : [ ],
-  "desList" : [ ],
-  "aviaryNum" : 2,
-  "description" : null,
-  "adopted" : false
+  "adopted" : true
 } ]

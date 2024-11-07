@@ -5,7 +5,7 @@ import org.example.backend.constants.AnimalType;
 import java.time.LocalDate;
 import java.util.*;
 
-public class Animal {
+public class Animal implements Entity {
 
     private int id;
     private AnimalType type;
@@ -15,10 +15,10 @@ public class Animal {
     private LocalDate incomeDate;
     private LocalDate adoptDate;
     private Owner owner;
-    private Set<String> vaccList = new HashSet<>();
-    private Set<String> desList = new HashSet<>();
+    private final Set<String> vaccList = new HashSet<>();
+    private final Set<String> desList = new HashSet<>();
     private boolean isAdopted;
-    private int aviaryNum;
+    private Integer aviaryNum;
     private String description;
 
     public Animal() {
@@ -32,6 +32,7 @@ public class Animal {
         this.aviaryNum = aviaryNum;
     }
 
+    @Override
     public int getId() {
         return id;
     }
@@ -108,7 +109,7 @@ public class Animal {
         return aviaryNum;
     }
 
-    public void setAviaryNum(int aviaryNum) {
+    public void setAviaryNum(Integer aviaryNum) {
         this.aviaryNum = aviaryNum;
     }
 

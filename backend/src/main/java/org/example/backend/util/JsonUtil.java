@@ -13,7 +13,7 @@ public class JsonUtil {
     private static final ObjectMapper objectMapper
             = new ObjectMapper().registerModule(new JavaTimeModule());
 
-    public static <T> List<T> jsonToMap(String path, Class<T> clazz) throws IOException {
+    public static <T> List<T> jsonToList(String path, Class<T> clazz) throws IOException {
         return objectMapper.readValue(Files.readString(Path.of(path)),
                 objectMapper.getTypeFactory().constructCollectionType(List.class, clazz));
     }
