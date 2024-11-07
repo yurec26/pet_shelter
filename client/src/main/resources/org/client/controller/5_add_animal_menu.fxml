@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="374.0" prefWidth="378.0" style="-fx-background-color: #ffce92; -fx-border-color: #5e7939; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.client.controller.AddAnimalController">
+   <children>
+      <Rectangle fx:id="addConfButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="25.0" layoutX="219.0" layoutY="322.0" opacity="0.63" stroke="#325372" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="99.0" />
+      <Text fx:id="Text_Move_Conf_Button" disable="true" fill="WHITE" layoutX="205.0" layoutY="338.0" stroke="WHITE" strokeType="INSIDE" text="Ok" textAlignment="CENTER" wrappingWidth="127.94090270996094">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="animalNameText" layoutX="54.0" layoutY="85.0" prefHeight="28.0" prefWidth="270.0" promptText="Имя Питомца" />
+      <ChoiceBox fx:id="chooseAnimalType" layoutX="54.0" layoutY="24.0" prefWidth="270.0" />
+      <TextField fx:id="animalBreedText" layoutX="54.0" layoutY="144.0" prefHeight="28.0" prefWidth="270.0" promptText="Порода Питомца" />
+      <DatePicker fx:id="birthDateBox" layoutX="54.0" layoutY="205.0" prefWidth="270.0" promptText="Дата Рождения" />
+      <TextField fx:id="newAviaryNum" layoutX="54.0" layoutY="261.0" prefHeight="28.0" prefWidth="270.0" promptText="Номер Нового Вольера" />
+      <Rectangle fx:id="CloseButton" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#3c5618" height="25.0" layoutX="61.0" layoutY="322.0" opacity="0.63" stroke="#325372" strokeType="INSIDE" style="-fx-arc-height: 25; -fx-arc-width: 25;" width="99.0" />
+      <Text disable="true" fill="WHITE" layoutX="46.0" layoutY="338.0" stroke="WHITE" strokeType="INSIDE" text="Close" textAlignment="CENTER" wrappingWidth="127.94090270996094">
+         <font>
+            <Font name="Lucida Sans Unicode" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
